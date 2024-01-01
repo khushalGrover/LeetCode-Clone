@@ -25,7 +25,7 @@ function App() {
 
   
   return (
-    <div>
+    <div className='container'>
       <Hero scrollValue={scrollValue}  scrolled={scrolled}/>
       {/* <Section1 /> */}
       <Section1 />
