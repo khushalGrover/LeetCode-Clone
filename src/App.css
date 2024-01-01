@@ -1,0 +1,40 @@
+#root {
+  margin: 0 10rem;
+  padding: 0 5rem;
+}
+
+.section {
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  /* outline: 5px solid red; */
+}
+
+.section.left{
+  justify-content: flex-start;
+}
+
+.section.right{
+  justify-content: flex-end
+}
+.overlay{
+  position: fixed;
+  top: 0;
+  width: 90svw;
+  height: 90vh;
+  transition: all 0.5s ease-in-out;
+  outline: 5px solid red;
+
+}
+.overlay.left{
+  left: 0;
+  width: 50vw;
+  transition: all 0.5s ease-in-out;
+}
+.overlay.right{
+  right: 0;
+  width: 50vw;
+  transition: all 0.5s ease-in-out;
+}
