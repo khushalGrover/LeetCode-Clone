@@ -1,5 +1,5 @@
-import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
-import { Section } from '../layout/Section';
+import { VerticalFeatureRow } from '../components/VerticalFeatureRow';
+import { Section } from '../components/Section';
 
 const VerticalFeatures = () => (
   <Section title="" description="">

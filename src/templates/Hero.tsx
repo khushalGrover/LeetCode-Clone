@@ -1,15 +1,16 @@
 import Link from 'next/link';
 
-import { Background } from '../background/Background';
-import { BackgroundTilt } from '../background/BackgroundTilt';
-import { Button } from '../button/Button';
-import { HeroOneButton } from '../hero/HeroOneButton';
-import { Section } from '../layout/Section';
-import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
+import { Background } from '../components/Background';
+import { BackgroundTilt } from '../components/BackgroundTilt';
+import { Button } from '../components/Button';
+import { HeroOneButton } from '../components/HeroOneButton';
+import { Section } from '../components/Section';
+import { NavbarTwoColumns } from '../components/NavbarTwoColumns';
 import { Logo } from './Logo';
 
 const Hero = () => (
-  <Background color="transpaent">
+  <Background color="transpaent relative">
+    
     <Section yPadding="py-6">
       <NavbarTwoColumns logo={<Logo xl />}>
         <li>
