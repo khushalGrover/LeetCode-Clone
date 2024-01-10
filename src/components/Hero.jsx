@@ -1,70 +1,17 @@
-import { OrbitControls } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
-export const Hero = ({ scrolled, scrollValue }) => {
+import Button from "./helperCompenents/Button";
 
-    let result;
+const Hero = () => (
+    <header className="flex flex-col  items-center justify-center text-center ">
+    <h1 className="whitespace-pre-line text-5xl font-bold leading-hero text-primary-100">
+        <>
+            {'A New Way to '}
+            <span className="text-primary-500">Learn</span>
+        </>
+    </h1>
+    <div className="mb-16 mt-4 text-2xl">LeetCode is the best platform to help you enhance your skills, expand your knowledge and prepare for technical interviews.</div>
 
-    if (scrollValue < 150) 
-    {
-      result = 0;
-    } 
-    else if (scrollValue >= 150 && scrollValue < 250) 
-    {
-      result = 1;
-    } 
-    else if (scrollValue >= 250 && scrollValue < 350) 
-    {
-      result = 2;
-    } 
-    else if (scrollValue >= 350 && scrollValue < 450) 
-    {
-      result = 3;
-    } if (scrollValue >= 450 && scrollValue < 550) 
-    {
-      result = 4;
-    } if (scrollValue >= 550 && scrollValue < 650) 
-    {
-      result = 5;
-    }
+    <Button xl>Get Started</Button>
+  </header>
+);
 
-    const isEven = result % 2 === 0;
-
-    // let myClassName;
-    // if (scrolled) 
-    // {
-    //   // myClassName = isEven ? "overlay left" : "overlay right";
-    // //   console.log(scrollValue, "scrolled, result:", result, isEven ? "even" : "odd");
-    // } 
-    // else 
-    // {
-    //   myClassName = "overlay";
-    //   console.log(scrollValue, "not scrolled, result:", result);
-    // }
-
-
-    return (
-        <div className='overlay'>
-            <Canvas camera={ 
-                {
-                    position: [3,2,0],
-                    rotation: [0,1  ,0]
-                
-                }}>
-                {/* disable zoom and scroll in orbitcontrol */}
-                <mesh position={[0, 0, -2]} scale= {isEven ?  [.01,.01 ,.01] : [1,1,1] }>
-                    <boxGeometry />
-                    
-                    <meshNormalMaterial />
-                </mesh>
-                <mesh position={[0, 0, 2]} scale= {isEven ? [1,1,1] : [.01,.01 ,.01]}>
-                    <boxGeometry />
-                    
-                    <meshNormalMaterial />
-                </mesh>
-                < OrbitControls enableZoom={false} enablePan={false} autoRotate={false} />
-            </Canvas>
-        </div>
-       
-    )
-
-}
+export { Hero};

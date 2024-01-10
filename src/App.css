@@ -1,17 +1,39 @@
-.container {
-  margin: 0 10rem;
-  padding: 0 5rem;
-  outline: 5px solid green;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+
+
+
+
+
+.root {
+  margin: 0;
+  padding: 0;  
 }
 
+.body {
+  margin: 0;
+  padding: 0;  
+}
+
+
+
+.container {
+  margin: 0;
+  padding: 0;
+  outline: 5px solid green;
+  height: 100%;
+  width: 100%;
+
+}
+/*
 .section {
   height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2em;
-  /* outline: 5px solid red; */
 }
 
 .section.left{
@@ -20,7 +42,7 @@
 
 .section.right{
   justify-content: flex-end
-}
+}*/
 .overlay{
   position: fixed;
   top: 0;
@@ -28,7 +50,6 @@
   width: 100%;
   height: 100%;
   transition: all 0.5s ease-in-out;
-  /* inner outline */
   outline: 10px solid red;
   outline-offset: -6px;
 }
@@ -41,4 +62,6 @@
   right: 0;
   width: 50vw;
   transition: all 0.5s ease-in-out;
-} 
+}  
+
+

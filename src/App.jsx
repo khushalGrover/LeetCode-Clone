@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
+import { HeroOverlay } from './components/Canvas/HeroOverlay'
 import { Hero } from './components/Hero'
+import Background from './components/helperCompenents/Background';
 
 
 function App() {
@@ -26,8 +28,12 @@ function App() {
   
   return (
     <div className='container'>
-      <Hero scrollValue={scrollValue}  scrolled={scrolled}/>
-      
+      <Background color='transparent'>
+
+          <HeroOverlay scrollValue={scrollValue}  scrolled={scrolled}/>
+          <Hero/>
+
+      </Background>
 
     </div>
   );
