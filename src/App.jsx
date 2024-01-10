@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter } from "react-router-dom";
 import './App.css'
 
+import { Navbar } from './components/Navbar'
+// import { Hero } from './components/Hero'
 import { HeroOverlay } from './components/Canvas/HeroOverlay'
-import { Hero } from './components/Hero'
-import Background from './components/helperCompenents/Background';
 
 
 function App() {
@@ -27,15 +28,15 @@ function App() {
 
   
   return (
-    <div className='container'>
-      <Background color='transparent'>
-
-          <HeroOverlay scrollValue={scrollValue}  scrolled={scrolled}/>
-          <Hero/>
-
-      </Background>
-
-    </div>
+    <BrowserRouter>
+      <div className='relative z-0 bg-primary'>
+        <div className='bg-hero-pattern h-full bg-contain  lg:bg-none bg-no-repeat bg-right-bottom '>
+          <Navbar scrolled={scrolled}/>
+          {/* <Hero scrollValue={scrollValue}/> */}
+          <HeroOverlay scrollValue={scrollValue}  scrolled={scrolled} className='z-[-99]'/>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
