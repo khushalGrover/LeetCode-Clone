@@ -27,24 +27,12 @@ function App() {
   return (
     <div className='container'>
       <Hero scrollValue={scrollValue}  scrolled={scrolled}/>
-      {/* <Section1 /> */}
-      <Section1 />
-      <Section2 />
-      <Section1 />
-      <Section2 />
-      <Section1 />
-      <Section2 />
-      <Section1 />
+      
 
     </div>
   );
 }
 
-const Section1 = () => {
-  return <div className="section left">Section Left</div>;
-};
-const Section2 = () => {
-  return <div className="section right">Section Right</div>;
-};
+
 
 export default App
